@@ -137,7 +137,7 @@ metrics = pd.DataFrame(model.history.history)
 metrics.head()
 ```
 ### Visualization
-
+#### Validation Loss Vs Iteration Plot
 ```py
 metrics[['accuracy','val_accuracy']].plot()
 ```
@@ -145,6 +145,7 @@ metrics[['accuracy','val_accuracy']].plot()
 ![image](https://github.com/PSriVarshan/mnist-classification/assets/114944059/797acf6a-f29c-4634-838c-093e29f54d08)
 
 
+#### Training Loss
 ```py
 metrics[['loss','val_loss']].plot()
 ```
@@ -163,7 +164,7 @@ print(confusion_matrix(y_test,x_test_predictions))
 
 
 ### Classification Report
-```
+```py
 print(classification_report(y_test,x_test_predictions))
 
 img = image.load_img('/content/mnist2.png')
